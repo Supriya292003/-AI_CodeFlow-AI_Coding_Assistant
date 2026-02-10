@@ -1,0 +1,182 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern News Headlines</title>
+  <style>
+    /* CSS Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
+    }
+
+    .headline {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 15px;
+    }
+
+    .headline:last-child {
+      border-bottom: none;
+    }
+
+    .headline a {
+      text-decoration: none;
+      color: #3498db;
+      transition: color 0.3s ease;
+    }
+
+    .headline a:hover {
+      color: #2980b9;
+    }
+
+    .headline p {
+      font-size: 0.9em;
+      color: #777;
+    }
+
+    .date {
+      font-size: 0.8em;
+      color: #888;
+      margin-top: 5px;
+      display: block;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 600px) {
+      .container {
+        padding: 15px;
+        margin: 10px auto;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      .headline p {
+        font-size: 0.85em;
+      }
+    }
+
+    /* Optional: Add a dark mode */
+    body.dark-mode {
+        background-color: #222;
+        color: #eee;
+    }
+
+    body.dark-mode .container {
+        background-color: #333;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    body.dark-mode h1 {
+        color: #fff;
+        border-bottom-color: #555;
+    }
+
+    body.dark-mode .headline a {
+        color: #81D4FA;
+    }
+
+    body.dark-mode .headline a:hover {
+        color: #4FC3F7;
+    }
+
+    body.dark-mode .headline p {
+        color: #bbb;
+    }
+
+    body.dark-mode .date {
+        color: #ccc;
+    }
+
+    /* Dark Mode Toggle Button (Optional) */
+    .dark-mode-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1000; /* Ensure it's always on top */
+    }
+
+    .dark-mode-toggle:hover {
+        background-color: #555;
+    }
+
+  </style>
+</head>
+<body>
+
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+  <div class="container">
+    <h1>Latest News Headlines</h1>
+
+    <div class="headline">
+      <a href="#">Breaking: Government Announces New Economic Policy</a>
+      <p>The government has unveiled a comprehensive plan to boost the economy and create jobs. Details are still emerging.</p>
+      <span class="date">Published: October 26, 2023</span>
+    </div>
+
+    <div class="headline">
+      <a href="#">Local School Wins National Science Competition</a>
+      <p>Students from Elm Street High School showcased their innovative project and secured first place in the national science competition.</p>
+      <span class="date">Published: October 25, 2023</span>
+    </div>
+
+    <div class="headline">
+      <a href="#">Global Tech Giant to Invest Millions in Renewable Energy</a>
+      <p>A major technology company has announced plans to invest heavily in renewable energy projects, signaling a commitment to sustainability.</p>
+      <span class="date">Published: October 24, 2023</span>
+    </div>
+
+    <div class="headline">
+        <a href="#">Scientists Discover New Species of Deep-Sea Fish</a>
+        <p>Researchers have identified a previously unknown species of fish living in the depths of the ocean.</p>
+        <span class="date">Published: October 23, 2023</span>
+    </div>
+
+    <div class="headline">
+        <a href="#">Record Number of Tourists Visit National Park</a>
+        <p>The National Park Service reports a significant increase in visitors this year, boosting local economies.</p>
+        <span class="date">Published: October 22, 2023</span>
+    </div>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+    }
+  </script>
+
+</body>
+</html>
+```

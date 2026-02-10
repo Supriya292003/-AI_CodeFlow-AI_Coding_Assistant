@@ -1,0 +1,267 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headline News</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #222;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        /* Navigation Styles */
+        nav ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            display: block;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #e9ecef;
+            text-decoration: none;
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 20px 0;
+        }
+
+        .featured-article {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .featured-article img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .article-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .article {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .article img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            height: 200px; /* Consistent image height */
+            object-fit: cover; /* Maintain aspect ratio, crop if needed */
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin-bottom: 10px;
+            }
+        }
+
+        /* Search Styles */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end; /* Align to the right */
+        }
+
+        .search-bar input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 5px;
+        }
+
+        .search-bar button {
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #0056b3;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Headline News</h1>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Search articles...">
+                <button>Search</button>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">World</a></li>
+                    <li><a href="#">Politics</a></li>
+                    <li><a href="#">Technology</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Sports</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="featured-article">
+                <img src="/generated-images/photo1.jpg" alt="Featured News Image">
+                <h2>Featured: Breaking News Story</h2>
+                <p>This is a brief summary of the breaking news story.  Stay tuned for more updates as the story develops.</p>
+                <a href="#">Read More</a>
+            </section>
+
+            <section class="article-list">
+                <article class="article">
+                    <img src="/generated-images/photo2.jpg" alt="News Image">
+                    <h3>Article Headline 1</h3>
+                    <p>Short description of the article. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">Read More</a>
+                </article>
+
+                <article class="article">
+                    <img src="/generated-images/photo3.jpg" alt="News Image">
+                    <h3>Article Headline 2</h3>
+                    <p>Short description of the article. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">Read More</a>
+                </article>
+
+                <article class="article">
+                    <img src="/generated-images/photo4.jpg" alt="News Image">
+                    <h3>Article Headline 3</h3>
+                    <p>Short description of the article. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">Read More</a>
+                </article>
+
+                <article class="article">
+                    <img src="/generated-images/photo5.jpg" alt="News Image">
+                    <h3>Article Headline 4</h3>
+                    <p>Short description of the article. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">Read More</a>
+                </article>
+
+                <article class="article">
+                    <img src="/generated-images/photo6.jpg" alt="News Image">
+                    <h3>Article Headline 5</h3>
+                    <p>Short description of the article. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">Read More</a>
+                </article>
+
+                <article class="article">
+                    <img src="/generated-images/photo7.jpg" alt="News Image">
+                    <h3>Article Headline 6</h3>
+                    <p>Short description of the article. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">Read More</a>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            &copy; 2024 Headline News. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Simple Search Functionality (Client-Side)
+        document.querySelector('.search-bar button').addEventListener('click', function() {
+            const searchTerm = document.querySelector('.search-bar input[type="text"]').value.toLowerCase();
+            const articles = document.querySelectorAll('.article');
+
+            articles.forEach(article => {
+                const title = article.querySelector('h3').textContent.toLowerCase();
+                const description = article.querySelector('p').textContent.toLowerCase();
+
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    article.style.display = 'block'; // Show the article
+                } else {
+                    article.style.display = 'none'; // Hide the article
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+```

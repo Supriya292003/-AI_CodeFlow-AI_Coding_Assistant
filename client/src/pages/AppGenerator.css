@@ -1,0 +1,185 @@
+.apk-generator-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 2.8em;
+  text-align: center;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #555;
+}
+
+.prompt-textarea {
+  width: 100%;
+  padding: 18px;
+  margin-bottom: 25px;
+  border: 1px solid #a0a0a0;
+  border-radius: 10px;
+  font-size: 1.1em;
+  resize: vertical;
+  min-height: 120px;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.08);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prompt-textarea:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+  outline: none;
+}
+
+.generate-button {
+  background-color: #3498db;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  font-weight: 600;
+}
+
+.generate-button:hover:not(:disabled) {
+  background-color: #2980b9;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.generate-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.loading-indicator {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  color: #666;
+  font-size: 1.1em;
+  background-color: #e0f2f7;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #3498db;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  animation: spin 1s linear infinite;
+  margin-right: 12px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-message {
+  margin-top: 25px;
+  padding: 15px;
+  background-color: #ffebee;
+  border: 1px solid #ef9a9a;
+  border-radius: 8px;
+  color: #c0392b;
+  font-size: 1.1em;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.result-section {
+  margin-top: 40px;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.result-title {
+  font-size: 2em;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Monaco Editor container styling */
+.result-section .monaco-editor-container {
+  border-radius: 8px;
+  overflow: hidden; /* Ensures the editor's content respects border-radius */
+  border: 1px solid #ddd; /* Add a subtle border to the editor */
+}
+
+.note {
+  font-size: 0.95em;
+  color: #777;
+  margin-top: 30px;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  margin: 20px 0;
+  width: 490%;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.2em;
+  }
+  .description {
+    font-size: 1em;
+  }
+  .prompt-textarea {
+    padding: 12px;
+    font-size: 1em;
+  }
+  .generate-button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+  }
+  .loading-indicator, .error-message, .note {
+    font-size: 1em;
+  }
+  .result-title {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8em;
+  }
+  .prompt-textarea {
+    min-height: 80px;
+  }
+  .generate-button {
+    width: 100%;
+  }
+}

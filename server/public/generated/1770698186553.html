@@ -1,0 +1,168 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Responsive Table</title>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles to ensure Inter font and explicit rounded corners */
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply bg-gray-100 text-gray-800; /* Apply some basic Tailwind styles to body */
+        }
+        /* Custom class for rounded corners on elements that might not get them by default (e.g., if content pushes out) */
+        .rounded-element {
+            @apply rounded-lg;
+        }
+        /* Override Tailwind's default border-collapse for a more distinct cell appearance if desired,
+           though Tailwind's table styles usually look clean without individual cell borders.
+           For this example, we rely on Tailwind's default clean table styling. */
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+
+    <main class="w-full max-w-screen-xl mx-auto">
+        <h1 class="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-900 rounded-element p-4 bg-white shadow-sm">
+            Product Sales Overview
+        </h1>
+
+        <div class="relative overflow-x-auto shadow-lg rounded-element bg-white">
+            <table class="w-full text-sm text-left text-gray-600">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 rounded-t-lg">
+                    <tr>
+                        <th scope="col" class="px-6 py-3 rounded-tl-lg">
+                            Product Name
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Category
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Price
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Units Sold
+                        </th>
+                        <th scope="col" class="px-6 py-3 rounded-tr-lg">
+                            Revenue
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-white border-b hover:bg-gray-50 rounded-element">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                            Laptop Pro 15
+                        </th>
+                        <td class="px-6 py-4">
+                            Electronics
+                        </td>
+                        <td class="px-6 py-4">
+                            $1200.00
+                        </td>
+                        <td class="px-6 py-4">
+                            150
+                        </td>
+                        <td class="px-6 py-4">
+                            $180,000.00
+                        </td>
+                    </tr>
+                    <tr class="bg-gray-50 border-b hover:bg-gray-100 rounded-element">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                            Wireless Mouse
+                        </th>
+                        <td class="px-6 py-4">
+                            Accessories
+                        </td>
+                        <td class="px-6 py-4">
+                            $25.00
+                        </td>
+                        <td class="px-6 py-4">
+                            500
+                        </td>
+                        <td class="px-6 py-4">
+                            $12,500.00
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b hover:bg-gray-50 rounded-element">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                            Mechanical Keyboard
+                        </th>
+                        <td class="px-6 py-4">
+                            Accessories
+                        </td>
+                        <td class="px-6 py-4">
+                            $110.00
+                        </td>
+                        <td class="px-6 py-4">
+                            220
+                        </td>
+                        <td class="px-6 py-4">
+                            $24,200.00
+                        </td>
+                    </tr>
+                    <tr class="bg-gray-50 border-b hover:bg-gray-100 rounded-element">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                            4K Monitor 27"
+                        </th>
+                        <td class="px-6 py-4">
+                            Electronics
+                        </td>
+                        <td class="px-6 py-4">
+                            $450.00
+                        </td>
+                        <td class="px-6 py-4">
+                            90
+                        </td>
+                        <td class="px-6 py-4">
+                            $40,500.00
+                        </td>
+                    </tr>
+                    <tr class="bg-white hover:bg-gray-50 rounded-b-lg">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap rounded-bl-lg">
+                            Noise Cancelling Headphones
+                        </th>
+                        <td class="px-6 py-4">
+                            Audio
+                        </td>
+                        <td class="px-6 py-4">
+                            $299.00
+                        </td>
+                        <td class="px-6 py-4">
+                            180
+                        </td>
+                        <td class="px-6 py-4 rounded-br-lg">
+                            $53,820.00
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script>
+        // JavaScript for basic interactivity or logging
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Modern Responsive Table loaded successfully!');
+
+            // Example: Add a simple hover effect using JS if CSS is not sufficient
+            // (Tailwind's `:hover` variants are usually enough, but this demonstrates JS capability)
+            const tableRows = document.querySelectorAll('tbody tr');
+            tableRows.forEach(row => {
+                row.addEventListener('click', () => {
+                    alert(`You clicked on row for product: ${row.querySelector('th').textContent}`);
+                    // Example: Toggle a class on click
+                    row.classList.toggle('bg-blue-100');
+                    row.classList.toggle('text-blue-800');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+```

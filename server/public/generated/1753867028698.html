@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+        }
+        .rounded-lg {
+            border-radius: 0.5rem;
+        }
+        .card {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .grid-cols-3 {
+                grid-template-columns: repeat(1, 1fr); /* Single column layout */
+            }
+            .max-w-sm{
+                max-w-full;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+<header class="bg-blue-500 text-white p-4 rounded-lg shadow-md">
+    <div class="container mx-auto text-center">
+        <h1 class="text-3xl font-bold">Education System</h1>
+    </div>
+</header>
+
+<main class="container mx-auto py-8 px-4">
+    <section class="grid grid-cols-3 gap-4">
+        <div class="card bg-white p-6 rounded-lg">
+            <img src="https://via.placeholder.com/350x200" alt="Course 1" class="rounded-lg mb-4">
+            <h2 class="text-xl font-semibold mb-2">Course 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="card bg-white p-6 rounded-lg">
+            <img src="https://via.placeholder.com/350x200" alt="Course 2" class="rounded-lg mb-4">
+            <h2 class="text-xl font-semibold mb-2">Course 2</h2>
+            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="card bg-white p-6 rounded-lg">
+            <img src="https://via.placeholder.com/350x200" alt="Course 3" class="rounded-lg mb-4">
+            <h2 class="text-xl font-semibold mb-2">Course 3</h2>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+        </div>
+    </section>
+
+    <section class="mt-8">
+        <h2 class="text-2xl font-bold mb-4">About Us</h2>
+        <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </section>
+</main>
+
+<footer class="bg-blue-500 text-white p-4 mt-8 rounded-lg shadow-md text-center">
+    <p>&copy; 2023 Education System</p>
+</footer>
+
+<script>
+    // Add any JavaScript functionality here if needed.  For example, you might add interactivity to the course cards.
+</script>
+
+</body>
+</html>

@@ -1,0 +1,271 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Portfolio</title>
+    <style>
+        /* CSS Reset */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 2rem;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        #about {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        #about h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        #about p {
+            margin-bottom: 1rem;
+        }
+
+        /* Gallery Styles */
+        #gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        #gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        #gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        #contact {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        #contact h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        #contact form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        #contact label {
+            margin-bottom: 0.5rem;
+            text-align: left;
+        }
+
+        #contact input,
+        #contact textarea {
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #contact button {
+            background-color: #333;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #contact button:hover {
+            background-color: #555;
+        }
+
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%; /* Make footer full width */
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+
+            #gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Jane Doe Photography</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Welcome to my photography portfolio! I'm Jane Doe, a passionate photographer based in [City, State]. I
+                specialize in [Photography specialties - e.g., portrait, landscape, wedding photography].</p>
+            <p>My goal is to capture moments that tell a story and evoke emotion. I believe that every picture has a
+                unique perspective and I strive to bring out the beauty in every subject.</p>
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <img src="/generated-images/photo1.jpg" alt="Image 1">
+            <img src="/generated-images/photo2.jpg" alt="Image 2">
+            <img src="/generated-images/photo3.jpg" alt="Image 3">
+            <img src="/generated-images/photo4.jpg" alt="Image 4">
+            <img src="/generated-images/photo5.jpg" alt="Image 5">
+            <img src="/generated-images/photo6.jpg" alt="Image 6">
+            <img src="/generated-images/photo7.jpg" alt="Image 7">
+            <img src="/generated-images/photo8.jpg" alt="Image 8">
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>I'd love to hear from you! Please fill out the form below to get in touch.</p>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jane Doe Photography. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Client-side form validation (optional) and basic submit handling.
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission.
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Simple validation:  Check if fields are empty (more robust validation needed for production)
+            if (!name || !email || !message) {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            // Basic email validation (regex)
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+
+            // Here, you would typically send the data to a server using AJAX/Fetch.
+            // For this example, we'll just display an alert.
+            alert(`Form submitted!\nName: ${name}\nEmail: ${email}\nMessage: ${message}`);
+
+            // You would typically reset the form after successful submission (after sending the data to the server):
+            document.getElementById('contact-form').reset();
+
+            // In a real application, you would replace the `alert` with code that sends the data
+            // to your server using `fetch` or `XMLHttpRequest`.  You would also handle any errors
+            // that might occur during the submission process.
+        });
+    </script>
+</body>
+
+</html>
+```

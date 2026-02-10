@@ -1,0 +1,236 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flavor Fusion - Cooking Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8; /* Light gray background */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .navbar {
+            background-color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .nav-links a {
+            color: #555;
+            margin-left: 20px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #e57373; /* Light red on hover */
+        }
+
+        .hero {
+            background-color: #fff;
+            padding: 50px 0;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #777;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background-color: #e57373; /* Light red */
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #d32f2f; /* Darker red on hover */
+        }
+
+        .recipes {
+            margin-top: 40px;
+        }
+
+        .recipe-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .recipe-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .recipe-content {
+            padding: 20px;
+        }
+
+        .recipe-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .recipe-description {
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 40px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        /* About Page Specific Styling */
+        .about-content {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-top: 20px;
+        }
+
+        .about-image {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .about-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .about-description {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
+
+            .nav-links a {
+                margin-left: 10px;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .recipe-title {
+                font-size: 1rem;
+            }
+
+            .about-title {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                padding: 20px;
+            }
+
+            .about-image {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container flex items-center justify-between">
+            <a href="#" class="navbar-brand">Flavor Fusion</a>
+            <div class="nav-links flex items-center">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="#">Recipes</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="about-content">
+            <h2 class="about-title">About Flavor Fusion</h2>
+            <img src="https://placehold.co/600x400" alt="Chef cooking" class="about-image rounded-lg">
+            <p class="about-description">
+                Welcome to Flavor Fusion, your ultimate destination for culinary inspiration! We are passionate about bringing delicious and diverse recipes to your kitchen, making cooking an enjoyable and rewarding experience.
+            </p>
+            <p class="about-description">
+                Our mission is to empower home cooks of all skill levels with easy-to-follow recipes, helpful tips, and engaging content. Whether you're a seasoned chef or just starting out, you'll find something to love here.
+            </p>
+            <p class="about-description">
+                At Flavor Fusion, we believe that food is more than just sustenance – it's a way to connect with others, explore new cultures, and express your creativity. Join us on this culinary journey and discover the joy of cooking!
+            </p>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            &copy; 2024 Flavor Fusion. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
+```

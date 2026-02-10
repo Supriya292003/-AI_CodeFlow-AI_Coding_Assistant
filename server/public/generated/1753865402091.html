@@ -1,0 +1,97 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        table {
+            width: 90%;
+            max-width: 800px;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f0f0f0;
+        }
+
+        .rounded-lg {
+            border-radius: 0.5rem;
+        }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+
+<div class="p-4 rounded-lg bg-white shadow-md">
+    <table>
+        <thead>
+        <tr>
+            <th>Product</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Item 1</td>
+            <td>This is a sample product description.</td>
+            <td>$29.99</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Item 2</td>
+            <td>Another sample product description.</td>
+            <td>$49.99</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Item 3</td>
+            <td>Yet another product description.</td>
+            <td>$19.99</td>
+            <td>3</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    // Add any JavaScript functionality here if needed.  For example, you might add client-side sorting or filtering.
+</script>
+</body>
+</html>
+```

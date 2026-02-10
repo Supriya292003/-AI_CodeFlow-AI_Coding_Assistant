@@ -1,0 +1,290 @@
+/* public/App.css */
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.app-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 35px;
+    max-width: 900px;
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.app-title {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.app-description {
+    color: #7f8c8d;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.prompt-input {
+    width: calc(100% - 40px); /* Account for padding */
+    padding: 18px;
+    margin-bottom: 25px;
+    border: 1px solid #dfe6e9;
+    border-radius: 10px;
+    font-size: 1.05em;
+    line-height: 1.5;
+    resize: vertical;
+    min-height: 150px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.03);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prompt-input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    outline: none;
+}
+
+.generate-button {
+    background-color: #3498db;
+    color: white;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.generate-button:hover:not(:disabled) {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.generate-button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+    opacity: 0.7;
+    box-shadow: none;
+}
+
+.status-message {
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.05em;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.status-message.loading {
+    background-color: #e8f5fd;
+    border: 1px solid #b3e0fc;
+    color: #3498db;
+}
+
+.status-message.error {
+    background-color: #fce4e4;
+    border: 1px solid #fcc2c2;
+    color: #cc0000;
+}
+
+.spinner {
+    border: 4px solid rgba(52, 152, 219, 0.2);
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.result-section {
+    margin-top: 50px;
+    text-align: left;
+    border-top: 1px solid #ecf0f1;
+    padding-top: 40px;
+}
+
+.result-heading {
+    color: #2c3e50;
+    font-size: 2em;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.warning-box {
+    background-color: #fffde7; /* Light yellow */
+    border: 1px solid #ffe082; /* Yellow border */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    color: #a1887f; /* Darker text for contrast */
+    font-size: 0.95em;
+    line-height: 1.7;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.warning-box strong {
+    color: #8d6e63;
+}
+
+.warning-box ol {
+    margin-top: 15px;
+    padding-left: 25px;
+}
+
+.warning-box li {
+    margin-bottom: 8px;
+}
+
+.warning-box a {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+.warning-box a:hover {
+    color: #2980b9;
+}
+
+.code-display {
+    background-color: #2d2d2d; /* Dark background for code */
+    border-radius: 10px;
+    padding: 25px;
+    overflow-x: auto;
+    white-space: pre-wrap; /* Ensures long lines wrap */
+    word-break: break-all; /* Breaks words if necessary */
+    font-family: 'Fira Code', 'Courier New', Courier, monospace; /* Fira Code if available, else monospace */
+    font-size: 0.9em;
+    line-height: 1.5;
+    max-height: 600px; /* Limit height and add scroll */
+    color: #f8f8f2; /* Light text for dark background */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.code-display code {
+    display: block; /* Ensures code block takes full width */
+}
+
+.download-info-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px dashed #ecf0f1;
+    text-align: center;
+}
+
+.download-disclaimer {
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+.simulated-download-link {
+    display: inline-block;
+    background-color: #95a5a6; /* Grey for simulated action */
+    color: white;
+    padding: 14px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.simulated-download-link:hover {
+    background-color: #7f8c8d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .app-container {
+        padding: 20px;
+        margin-top: 15px;
+    }
+
+    .app-title {
+        font-size: 2em;
+    }
+
+    .prompt-input {
+        width: calc(100% - 30px);
+        padding: 15px;
+    }
+
+    .generate-button {
+        padding: 14px 25px;
+        font-size: 1.1em;
+    }
+
+    .result-heading {
+        font-size: 1.6em;
+    }
+
+    .warning-box, .code-display, .download-info-section {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-container {
+        padding: 15px;
+    }
+
+    .app-title {
+        font-size: 1.8em;
+    }
+
+    .prompt-input {
+        width: calc(100% - 20px);
+        padding: 10px;
+    }
+
+    .generate-button {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+
+    .status-message {
+        font-size: 0.9em;
+        gap: 8px;
+    }
+
+    .spinner {
+        width: 20px;
+        height: 20px;
+    }
+
+    .result-heading {
+        font-size: 1.4em;
+    }
+
+    .warning-box, .code-display, .download-info-section {
+        padding: 10px;
+    }
+}
