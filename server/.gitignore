@@ -1,0 +1,13 @@
+# Environment variables
+.env
+
+# Dependencies
+node_modules/
+
+# Generated files
+public/generated/
+public/downloads/
+
+# Temp directories
+temp/
+temp-projects/
