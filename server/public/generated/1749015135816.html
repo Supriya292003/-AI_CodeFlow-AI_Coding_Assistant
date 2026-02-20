@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Headlines</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        .rounded-all {
+            border-radius: 0.5rem; /*Consistent rounded corners*/
+        }
+        .news-card {
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        .news-card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4">
+    <h1 class="text-3xl font-bold mb-4 text-center text-gray-800">Today's Headlines</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="news-card rounded-all p-4">
+            <img src="https://via.placeholder.com/350x150" alt="News Image 1" class="rounded-t-all">
+            <h2 class="text-xl font-semibold mt-2 mb-1">Headline 1:  Major Development in Tech Industry</h2>
+            <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="news-card rounded-all p-4">
+            <img src="https://via.placeholder.com/350x150" alt="News Image 2" class="rounded-t-all">
+            <h2 class="text-xl font-semibold mt-2 mb-1">Headline 2:  Political Upheaval Shakes the Nation</h2>
+            <p class="text-gray-600 text-sm">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+
+        <div class="news-card rounded-all p-4">
+            <img src="https://via.placeholder.com/350x150" alt="News Image 3" class="rounded-t-all">
+            <h2 class="text-xl font-semibold mt-2 mb-1">Headline 3:  New Scientific Breakthrough Announced</h2>
+            <p class="text-gray-600 text-sm">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+        </div>
+        <!--Add more news cards here as needed -->
+    </div>
+
+
+    <script>
+        // Add any JavaScript functionality here if needed.  For example, you could add lazy loading for images.
+
+    </script>
+</body>
+</html>

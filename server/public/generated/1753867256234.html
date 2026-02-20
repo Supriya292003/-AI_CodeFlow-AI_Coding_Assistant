@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education System Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .rounded-all {
+            border-radius: 0.5rem; /* Consistent rounded corners */
+        }
+        /*Adding some custom styles for better visual appeal beyond Tailwind's defaults*/
+        .bg-light {
+            background-color: #f8f9fa;
+        }
+        .bg-primary {
+            background-color: #007bff; /* Example primary color */
+        }
+        .text-primary {
+            color: #007bff;
+        }
+
+    </style>
+</head>
+<body class="bg-light">
+
+    <nav class="bg-primary p-4 rounded-all">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-white text-2xl font-bold">Education System</h1>
+            <ul class="flex space-x-4 text-white">
+                <li><a href="#courses" class="hover:underline">Courses</a></li>
+                <li><a href="#about" class="hover:underline">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="courses" class="container mx-auto py-8">
+        <h2 class="text-3xl font-bold mb-4">Our Courses</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white rounded-all p-6 shadow-md">
+                <img src="https://via.placeholder.com/350x200" alt="Course 1" class="rounded-t-all mb-2">
+                <h3 class="text-xl font-semibold mb-2">Course Title 1</h3>
+                <p class="text-gray-600">Course description goes here.</p>
+            </div>
+            <div class="bg-white rounded-all p-6 shadow-md">
+                <img src="https://via.placeholder.com/350x200" alt="Course 2" class="rounded-t-all mb-2">
+                <h3 class="text-xl font-semibold mb-2">Course Title 2</h3>
+                <p class="text-gray-600">Course description goes here.</p>
+            </div>
+            <div class="bg-white rounded-all p-6 shadow-md">
+                <img src="https://via.placeholder.com/350x200" alt="Course 3" class="rounded-t-all mb-2">
+                <h3 class="text-xl font-semibold mb-2">Course Title 3</h3>
+                <p class="text-gray-600">Course description goes here.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container mx-auto py-8 bg-white rounded-all p-6 shadow-md">
+        <h2 class="text-3xl font-bold mb-4">About Us</h2>
+        <p class="text-gray-600">This is a placeholder for the about section.  You can add your organization's mission statement, history, and contact information here.</p>
+    </section>
+
+
+    <script>
+        // Add any JavaScript functionality here if needed.  For example, you could add interactive elements or handle form submissions.
+    </script>
+</body>
+</html>

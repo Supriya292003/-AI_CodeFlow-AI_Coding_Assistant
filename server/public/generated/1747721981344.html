@@ -1,0 +1,123 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photographer Portfolio</title>
+<style>
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+.gallery-item .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .caption {
+  opacity: 1;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>John Doe Photography</h1>
+</header>
+
+<div class="container">
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="https://via.placeholder.com/300x200" alt="Image 1">
+      <div class="caption">Image Caption 1</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://via.placeholder.com/300x200" alt="Image 2">
+      <div class="caption">Image Caption 2</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://via.placeholder.com/300x200" alt="Image 3">
+      <div class="caption">Image Caption 3</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://via.placeholder.com/300x200" alt="Image 4">
+      <div class="caption">Image Caption 4</div>
+    </div>
+    <!-- Add more gallery items as needed -->
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2023 John Doe Photography</p>
+</footer>
+
+</body>
+</html>
+```
+
+This improved code uses placeholders for images.  Remember to replace `"https://via.placeholder.com/300x200"` with actual image URLs from your portfolio.  The CSS is more robust and uses `grid` for responsive layout, automatically adjusting to different screen sizes. The hover effect enhances the user experience.  Remember to add more gallery items to showcase your work.  This provides a solid foundation for a modern and responsive photographer's portfolio website.  For even more advanced features, consider using a JavaScript framework like React, Vue, or Angular for dynamic content and more complex interactions.

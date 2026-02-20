@@ -1,0 +1,125 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern News Headlines</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+        }
+
+        .news-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .headline-card {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .headline-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .headline-content {
+            padding: 20px;
+        }
+
+        .headline-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1e293b; /* Dark gray title */
+        }
+
+        .headline-description {
+            font-size: 1rem;
+            color: #4b5563; /* Medium gray description */
+            margin-bottom: 12px;
+        }
+
+        .headline-source {
+            font-size: 0.875rem;
+            color: #6b7280; /* Gray source */
+        }
+
+        @media (min-width: 768px) {
+            .headline-card {
+                flex-direction: row;
+            }
+
+            .headline-image {
+                width: 300px;
+                height: auto;
+            }
+
+            .headline-content {
+                flex: 1;
+            }
+        }
+
+        /* Tailwind Overrides for Rounded Corners */
+        .rounded {
+            border-radius: 0.75rem; /* 12px */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="news-container">
+        <h1 class="text-2xl font-bold mb-6 text-gray-800">Latest News Headlines</h1>
+
+        <div class="headline-card rounded">
+            <img src="https://placehold.co/600x400" alt="News Image 1" class="headline-image rounded-tl rounded-bl md:rounded-tr-none">
+            <div class="headline-content">
+                <h2 class="headline-title">Breaking: Major Tech Company Announces New Product</h2>
+                <p class="headline-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                <p class="headline-source">Source: Tech News Today</p>
+            </div>
+        </div>
+
+        <div class="headline-card rounded">
+            <img src="https://placehold.co/600x400" alt="News Image 2" class="headline-image rounded-tl rounded-bl md:rounded-tr-none">
+            <div class="headline-content">
+                <h2 class="headline-title">Global Stock Markets Experience Significant Gains</h2>
+                <p class="headline-description">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+                <p class="headline-source">Source: Financial Times</p>
+            </div>
+        </div>
+
+        <div class="headline-card rounded">
+            <img src="https://placehold.co/600x400" alt="News Image 3" class="headline-image rounded-tl rounded-bl md:rounded-tr-none">
+            <div class="headline-content">
+                <h2 class="headline-title">Scientists Discover New Species in Amazon Rainforest</h2>
+                <p class="headline-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris rhoncus est eget efficitur fermentum. Proin id pulvinar orci.</p>
+                <p class="headline-source">Source: Science Daily</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Optional: Add some basic JavaScript functionality here if needed
+        console.log("News headlines loaded!");
+    </script>
+</body>
+</html>
+```
